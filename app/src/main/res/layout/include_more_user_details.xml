@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/wallet_review_text_view_parent">
+
+        <ImageView
+                android:id="@+id/icon_email"
+                style="@style/wallet_review_text_view_img"
+                android:src="@drawable/ic_boy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                style="@style/wallet_review_text_view_header"
+                android:text="Email"
+                android:textColor="@color/purple2"
+                app:layout_constraintStart_toEndOf="@+id/icon_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/text_email"/>
+
+        <TextView
+                style="@style/wallet_review_text_view_body"
+                android:id="@+id/tv_user_email"
+                tools:text="example@google.com"
+                android:textColor="#CACACA"
+                app:layout_constraintStart_toEndOf="@+id/icon_email"
+                app:layout_constraintTop_toBottomOf="@+id/text_email"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <include
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                layout="@layout/include_horizontal_divider"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_email"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/wallet_review_text_view_parent">
+
+        <ImageView
+                android:id="@+id/icon_subscription"
+                style="@style/wallet_review_text_view_img"
+                android:src="@drawable/ic_boy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        <TextView
+                style="@style/wallet_review_text_view_header"
+                android:text="Phone Number"
+                android:textColor="#FE667D"
+                app:layout_constraintStart_toEndOf="@+id/icon_subscription"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:id="@+id/text_phone_number"/>
+
+        <TextView
+                style="@style/wallet_review_text_view_body"
+                android:id="@+id/tv_user_phone"
+                tools:text="08168678931"
+                android:textColor="#CACACA"
+                app:layout_constraintStart_toEndOf="@+id/icon_subscription"
+                app:layout_constraintTop_toBottomOf="@+id/text_phone_number"
+                app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

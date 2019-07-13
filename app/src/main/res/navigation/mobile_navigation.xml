@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/mobile_navigation.xml"
+            app:startDestination="@id/allFarmersList">
+
+    <fragment android:id="@+id/allFarmersList" android:name="app.interview.agromall.destinations.AllFarmersList"
+              android:label="fragment_all_farmers_list" tools:layout="@layout/fragment_all_farmers_list">
+        <action android:id="@+id/action_allFarmersList_to_farmerInfoFragment" app:destination="@id/farmerInfoFragment"/>
+    </fragment>
+    <fragment android:id="@+id/farmerInfoFragment" android:name="app.interview.agromall.destinations.FarmerInfoFragment"
+              android:label="fragment_farmer_info" tools:layout="@layout/fragment_farmer_info">
+        <action android:id="@+id/action_farmerInfoFragment_to_editFarmerInfo" app:destination="@id/editFarmerInfo"/>
+    </fragment>
+    <fragment android:id="@+id/editFarmerInfo" android:name="app.interview.agromall.destinations.EditFarmerInfo"
+              android:label="fragment_edit_farmer_info" tools:layout="@layout/fragment_edit_farmer_info"/>
+</navigation>
